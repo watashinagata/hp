@@ -1,0 +1,216 @@
+/* レスポンシブユーティリティ */
+
+/* メディア実績セクションのスクロール問題修正 */
+#publications, .media-mentions,
+#publications *, .media-mentions *,
+.publications-grid, .publications-grid * {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+/* スクロール問題用の特別修正 */
+#services, #profile, #careers {
+  overflow: visible !important;
+  touch-action: auto !important;
+}
+
+#services *, #profile *, #careers * {
+  touch-action: auto !important;
+}
+
+/* スクロールイベントの伝播を許可 */
+#services .service-card,
+#profile .profile-card, 
+#careers .position-card,
+#careers .message-content {
+  pointer-events: auto !important;
+  touch-action: auto !important;
+  overflow: visible !important;
+}
+
+/* レスポンシブ基本設定 */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+/* 全セクションのオーバーフロー制御 */
+section {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* コンテナの調整 */
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-padding {
+    padding: var(--section-padding-small);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  
+  section {
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  /* グリッドレイアウトの調整 */
+  .services-grid,
+  .philosophy-cards,
+  .about-grid,
+  .careers-content,
+  .contact-grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 特定要素の調整 */
+  .service-card,
+  .philosophy-card,
+  .about-content,
+  .profile-card,
+  .position-card,
+  .contact-form-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* フッターの調整 */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  /* 各セクション特有の調整 */
+  .hero, .hero-canvas, .hero-overlay {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .recruitment-message,
+  .philosophy-cards,
+  .about-grid,
+  .profile-content,
+  .contact-grid {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 0.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-header .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  /* セクションの内部パディングの調整 */
+  section {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* スマホでのカード設定 - 丸角とシャドウを復活 */
+  .service-card,
+  .philosophy-card,
+  .profile-card,
+  .position-card,
+  .message-content,
+  .card,
+  .blog-card,
+  .contact-form-wrapper {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1.5rem !important;
+    padding: 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background-color: #ffffff !important;
+    overflow: hidden !important;
+  }
+  
+  /* ホバー/タップ時のエフェクト */
+  .service-card:hover,
+  .philosophy-card:hover,
+  .profile-card:hover,
+  .position-card:hover,
+  .message-content:hover,
+  .card:hover,
+  .blog-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  /* テキストサイズと行間を最適化 */
+  p, li, .info-value {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.02em !important;
+  }
+  
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  
+  h3 {
+    font-size: 1.1rem !important;
+  }
+}

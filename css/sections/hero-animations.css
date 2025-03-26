@@ -1,0 +1,143 @@
+/* ヒーローセクション用の追加アニメーション */
+
+/* 浮遊粒子のスタイル */
+.floating-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  animation: particleFloat 20s linear infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0) translateX(40px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(30px) translateX(20px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(360deg);
+  }
+}
+
+/* 光の波紋エフェクト */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150vh;
+  height: 150vh;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(66, 153, 225, 0.05) 0%,
+    rgba(66, 153, 225, 0) 70%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation: ripple 10s infinite linear;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+/* 動くグラデーションの背景 */
+.hero-canvas::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    rgba(43, 108, 176, 0.05) 0%,
+    rgba(66, 153, 225, 0.1) 25%,
+    rgba(49, 130, 206, 0.05) 50%,
+    rgba(43, 108, 176, 0.1) 75%,
+    rgba(66, 153, 225, 0.05) 100%
+  );
+  animation: moveGradient 20s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes moveGradient {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ロゴSVGの追加アニメーション */
+.logo-svg path {
+  animation: glowPath 4s ease-in-out infinite alternate;
+}
+
+@keyframes glowPath {
+  0% {
+    stroke: rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+  }
+  100% {
+    stroke: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 8px rgba(66, 153, 225, 0.8));
+  }
+}
+
+/* ヒーローセクションのロード時アニメーション */
+.hero {
+  animation: heroReveal 1.5s ease-out forwards;
+}
+
+@keyframes heroReveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ローディング後のファーストビュー特別効果 */
+body:not(.loading) .hero::before {
+  animation-delay: 0.5s;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+  .hero::after {
+    width: 100vh;
+    height: 100vh;
+  }
+  
+  @keyframes moveGradient {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-25%, -25%);
+    }
+  }
+}

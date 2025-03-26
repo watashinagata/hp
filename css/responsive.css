@@ -1,0 +1,279 @@
+/* ===== レスポンシブデザイン ===== */
+
+/* 大きいデスクトップ */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* タブレット */
+@media (max-width: 992px) {
+    :root {
+        --section-padding: var(--section-padding-mobile);
+    }
+    
+    /* 基本グリッド調整 */
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* 理念セクション */
+    .philosophy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .philosophy-card:last-child {
+        grid-column: span 2;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* フッター */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-brand {
+        grid-column: span 2;
+    }
+    
+    /* キャリアセクション */
+    .careers-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .careers-image {
+        order: -1;
+    }
+    
+    /* チームの声 */
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    /* 社内文化 */
+    .culture-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* モバイル */
+@media (max-width: 768px) {
+    /* ヘッダー */
+    .header {
+        padding: 15px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .menu-icon span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-dark);
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    /* サービス */
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* 理念 */
+    .philosophy-grid,
+    .principles-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .philosophy-card:last-child {
+        grid-column: 1;
+    }
+    
+    /* チームの声 */
+    .testimonial-card {
+        flex: 0 0 100%;
+    }
+    
+    /* 募集職種 */
+    .positions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* 社内文化 */
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* お問い合わせ */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-info {
+        order: -1;
+    }
+    
+    /* フッター */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-brand {
+        grid-column: 1;
+    }
+}
+
+/* 小さいモバイル */
+@media (max-width: 576px) {
+    /* 全般的なセクションのパディング */
+    section {
+        padding: 60px 0;
+    }
+    
+    /* セクションタイトル */
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    /* ヒーロー */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* お問い合わせ */
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-item .icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    /* キャリア */
+    .benefit-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .benefit-item .icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* フッター */
+    .footer-grid {
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}

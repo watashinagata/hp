@@ -1,0 +1,749 @@
+/* 小さいパーティクルの基本スタイル */
+.tiny-particle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* 小さいパーティクルのアニメーション */
+@keyframes tiny-float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-30px) translateX(15px);
+    opacity: 0;
+  }
+}
+
+@keyframes tiny-float-alt {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-20px) translateX(-10px);
+    opacity: 0;
+  }
+}
+
+/* 小さいパーティクルのアニメーション適用 */
+.tiny-particle:nth-child(odd) {
+  animation: tiny-float 8s ease-in-out infinite;
+}
+
+.tiny-particle:nth-child(even) {
+  animation: tiny-float-alt 10s ease-in-out infinite;
+}
+
+/* 小さいパーティクルの配置と色 */
+.tiny-particle-1 {
+  top: 25%;
+  left: 20%;
+  background: rgba(66, 153, 225, 0.6);
+  animation-delay: 0.1s;
+}
+
+.tiny-particle-2 {
+  top: 70%;
+  left: 80%;
+  background: rgba(229, 62, 62, 0.5);
+  animation-delay: 0.8s;
+}
+
+.tiny-particle-3 {
+  top: 40%;
+  left: 65%;
+  background: rgba(237, 137, 54, 0.6);
+  animation-delay: 1.3s;
+}
+
+.tiny-particle-4 {
+  top: 85%;
+  left: 30%;
+  background: rgba(66, 153, 225, 0.5);
+  animation-delay: 0.6s;
+}
+
+.tiny-particle-5 {
+  top: 55%;
+  left: 90%;
+  background: rgba(229, 62, 62, 0.6);
+  animation-delay: 1.9s;
+}
+
+.tiny-particle-6 {
+  top: 20%;
+  left: 45%;
+  background: rgba(147, 51, 234, 0.6);
+  animation-delay: 3.2s;
+}
+
+.tiny-particle-7 {
+  top: 90%;
+  left: 60%;
+  background: rgba(59, 130, 246, 0.7);
+  animation-delay: 2.4s;
+}
+
+.tiny-particle-8 {
+  top: 30%;
+  left: 5%;
+  background: rgba(236, 72, 153, 0.6);
+  animation-delay: 3.5s;
+}
+
+.tiny-particle-9 {
+  top: 65%;
+  left: 95%;
+  background: rgba(52, 211, 153, 0.7);
+  animation-delay: 0.9s;
+}
+
+.tiny-particle-10 {
+  top: 15%;
+  left: 75%;
+  background: rgba(250, 204, 21, 0.6);
+  animation-delay: 2.1s;
+}
+
+.tiny-particle-11 {
+  top: 80%;
+  left: 15%;
+  background: rgba(167, 139, 250, 0.7);
+  animation-delay: 2.7s;
+}
+
+.tiny-particle-12 {
+  top: 45%;
+  left: 35%;
+  background: rgba(248, 113, 113, 0.6);
+  animation-delay: 3.1s;
+}
+
+.tiny-particle-13 {
+  top: 10%;
+  left: 50%;
+  background: rgba(99, 102, 241, 0.7);
+  animation-delay: 1.5s;
+}
+
+.tiny-particle-14 {
+  top: 60%;
+  left: 5%;
+  background: rgba(16, 185, 129, 0.6);
+  animation-delay: 0.4s;
+}
+
+.tiny-particle-15 {
+  top: 38%;
+  left: 88%;
+  background: rgba(251, 146, 60, 0.7);
+  animation-delay: 2.8s;
+}
+
+/* パーティクルのアニメーションをバリエーション豊かに */
+@keyframes particle-float-type1 {
+  0% {
+    transform: translateY(20px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-float-type2 {
+  0% {
+    transform: translateX(-10px) translateY(10px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(10px) translateY(-10px) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+/* 奇数パーティクルに異なるアニメーションを適用 */
+.particle:nth-child(odd) {
+  animation: particle-float-type1 15s ease-in-out infinite;
+}
+
+.particle:nth-child(even) {
+  animation: particle-float-type2 18s ease-in-out infinite;
+}
+
+/* 完全にアニメーションに特化したヒーローセクション */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0c1e44, #113366);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 背景キャンバス */
+.hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(43, 108, 176, 0.2) 0%, rgba(10, 30, 66, 0) 70%);
+}
+
+/* 背景オーバーレイ */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(0deg, rgba(23, 49, 94, 0.9) 0%, rgba(15, 34, 70, 0.8) 100%);
+  opacity: 0.95;
+  z-index: 1;
+}
+
+/* ロゴ中央要素 */
+.hero-logo {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text-container {
+  animation: float 6s ease-in-out infinite;
+  text-align: center;
+}
+
+/* タグライン */
+.animated-tagline {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards 0.2s;
+  letter-spacing: 0.5px;
+}
+
+/* アニメーションロゴスタイル */
+.animated-logo {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards 0.5s;
+  text-shadow: 0 0 20px rgba(66, 153, 225, 0.7);
+}
+
+.animated-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    rgba(66, 153, 225, 0.7), 
+    rgba(255, 255, 255, 0.9),
+    rgba(66, 153, 225, 0.7));
+  animation: lineExpand 1.5s ease-in-out forwards 1.5s;
+}
+
+@keyframes lineExpand {
+  to {
+    width: 100%;
+  }
+}
+
+/* パーティクル要素 */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 15%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.4) 0%, rgba(66, 153, 225, 0) 70%);
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 65%;
+  left: 75%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at center, rgba(229, 62, 62, 0.3) 0%, rgba(229, 62, 62, 0) 70%);
+  animation-delay: 2s;
+}
+
+.particle-3 {
+  top: 30%;
+  left: 60%;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at center, rgba(237, 137, 54, 0.35) 0%, rgba(237, 137, 54, 0) 70%);
+  animation-delay: 1s;
+}
+
+.particle-4 {
+  top: 70%;
+  left: 25%;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.35) 0%, rgba(66, 153, 225, 0) 70%);
+  animation-delay: 0.5s;
+}
+
+.particle-5 {
+  top: 45%;
+  left: 85%;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle at center, rgba(229, 62, 62, 0.3) 0%, rgba(229, 62, 62, 0) 70%);
+  animation-delay: 1.5s;
+}
+
+.particle-6 {
+  top: 15%;
+  left: 40%;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle at center, rgba(147, 51, 234, 0.35) 0%, rgba(147, 51, 234, 0) 70%);
+  animation-delay: 2.5s;
+}
+
+.particle-7 {
+  top: 80%;
+  left: 55%;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0) 70%);
+  animation-delay: 1.2s;
+}
+
+.particle-8 {
+  top: 35%;
+  left: 8%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at center, rgba(236, 72, 153, 0.35) 0%, rgba(236, 72, 153, 0) 70%);
+  animation-delay: 3s;
+}
+
+.particle-9 {
+  top: 60%;
+  left: 90%;
+  width: 45px;
+  height: 45px;
+  background: radial-gradient(circle at center, rgba(52, 211, 153, 0.4) 0%, rgba(52, 211, 153, 0) 70%);
+  animation-delay: 0.7s;
+}
+
+.particle-10 {
+  top: 25%;
+  left: 80%;
+  width: 65px;
+  height: 65px;
+  background: radial-gradient(circle at center, rgba(250, 204, 21, 0.35) 0%, rgba(250, 204, 21, 0) 70%);
+  animation-delay: 1.8s;
+}
+
+.particle-11 {
+  top: 75%;
+  left: 10%;
+  width: 85px;
+  height: 85px;
+  background: radial-gradient(circle at center, rgba(167, 139, 250, 0.4) 0%, rgba(167, 139, 250, 0) 70%);
+  animation-delay: 2.2s;
+}
+
+.particle-12 {
+  top: 50%;
+  left: 30%;
+  width: 55px;
+  height: 55px;
+  background: radial-gradient(circle at center, rgba(248, 113, 113, 0.35) 0%, rgba(248, 113, 113, 0) 70%);
+  animation-delay: 2.7s;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0c1e44, #113366);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 背景キャンバス */
+.hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(43, 108, 176, 0.2) 0%, rgba(10, 30, 66, 0) 70%);
+}
+
+/* 背景オーバーレイ */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(0deg, rgba(23, 49, 94, 0.9) 0%, rgba(15, 34, 70, 0.8) 100%);
+  opacity: 0.95;
+  z-index: 1;
+}
+
+/* ロゴ中央要素 */
+.hero-logo {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text-container {
+  animation: float 6s ease-in-out infinite;
+  text-align: center;
+}
+
+/* タグライン */
+.animated-tagline {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards 0.2s;
+  letter-spacing: 0.5px;
+}
+
+/* アニメーションロゴスタイル */
+.animated-logo {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards 0.5s;
+  text-shadow: 0 0 20px rgba(66, 153, 225, 0.7);
+}
+
+.animated-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    rgba(66, 153, 225, 0.7), 
+    rgba(255, 255, 255, 0.9),
+    rgba(66, 153, 225, 0.7));
+  animation: lineExpand 1.5s ease-in-out forwards 1.5s;
+}
+
+@keyframes lineExpand {
+  to {
+    width: 100%;
+  }
+}
+
+/* パーティクル要素 */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+  animation: particle-float 15s ease-in-out infinite;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 15%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.3) 0%, rgba(66, 153, 225, 0) 70%);
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 65%;
+  left: 75%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at center, rgba(229, 62, 62, 0.2) 0%, rgba(229, 62, 62, 0) 70%);
+  animation-delay: 2s;
+}
+
+.particle-3 {
+  top: 30%;
+  left: 60%;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at center, rgba(237, 137, 54, 0.2) 0%, rgba(237, 137, 54, 0) 70%);
+  animation-delay: 1s;
+}
+
+.particle-4 {
+  top: 70%;
+  left: 25%;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.2) 0%, rgba(66, 153, 225, 0) 70%);
+  animation-delay: 0.5s;
+}
+
+.particle-5 {
+  top: 45%;
+  left: 85%;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle at center, rgba(229, 62, 62, 0.2) 0%, rgba(229, 62, 62, 0) 70%);
+  animation-delay: 1.5s;
+}
+
+/* 発光サークル */
+.glow-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.1) 0%, rgba(66, 153, 225, 0) 70%);
+  z-index: 2;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+/* スクロールインジケーター */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 3s forwards;
+}
+
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.wheel {
+  width: 3px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  animation: scroll 2s infinite;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrows span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  transform: rotate(45deg);
+  animation: arrows 2s infinite;
+}
+
+.arrows span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* アニメーション定義 */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(20px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes arrows {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* メディアクエリ */
+@media (max-width: 768px) {
+  .animated-tagline {
+    font-size: 1.2rem;
+  }
+  
+  .animated-logo {
+    font-size: 3.5rem;
+  }
+  
+  .glow-circle {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-tagline {
+    font-size: 1rem;
+  }
+  
+  .animated-logo {
+    font-size: 2.8rem;
+  }
+  
+  .glow-circle {
+    width: 200px;
+    height: 200px;
+  }
+}

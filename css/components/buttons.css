@@ -1,0 +1,97 @@
+/* ボタンスタイル */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  text-align: center;
+  transition: var(--transition-normal);
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* 強調されたボタン - 背景色が明るい場所に使用 */
+.btn-enhanced {
+  background: linear-gradient(135deg, #1a5fa0, #0056b3);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  padding: 0.85rem 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.btn-enhanced:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  box-shadow: 0 6px 15px rgba(0, 86, 179, 0.4);
+  transform: translateY(-3px);
+}
+
+.btn-enhanced:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 86, 179, 0.3);
+}
+
+.btn-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn-enhanced:hover::before {
+  left: 100%;
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--text-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-dark:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn-enhanced {
+    padding: 0.7rem 1.5rem;
+  }
+}

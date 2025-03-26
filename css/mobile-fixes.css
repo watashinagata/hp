@@ -1,0 +1,82 @@
+/* モバイル表示の修正用CSS */
+@media (max-width: 576px) {
+  /* 全てのカードに丸角とシャドウを強制適用 */
+  .service-card,
+  .philosophy-card,
+  .profile-card,
+  .position-card,
+  .message-content,
+  .card,
+  .blog-card,
+  .contact-form-wrapper {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    overflow: hidden !important;
+    background-color: #ffffff !important;
+  }
+  
+  /* 理念カードは特別な背景色 */
+  .philosophy-card {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  /* 理念カード上部の青いライン */
+  .philosophy-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 5px;
+    background: linear-gradient(90deg, 
+      rgba(66, 153, 225, 0.7), 
+      rgba(255, 255, 255, 0.9),
+      rgba(66, 153, 225, 0.7));
+    z-index: 1;
+    border-radius: 2.5px;
+  }
+
+  /* 全セクションに内部パディングを追加 */
+  section {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* モバイルでのコンテナの最大幅を調整 */
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* 永田プロフィールおよびメディア実績セクションの修正 */
+  #profile, .media-mentions, #publications,
+  #profile *, .media-mentions *, #publications *,
+  .profile-content, .publication-card, .publication-card * {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+  
+  /* カードのパディングを最適化 */
+  .service-card,
+  .profile-card,
+  .publication-card,
+  .profile-details,
+  .publication-card-inner {
+    padding: 0.75rem !important;
+  }
+  
+  /* レスポンシブ調整を上書き */
+  .card, 
+  .profile-card, 
+  .position-card, 
+  .message-content, 
+  .service-card, 
+  .philosophy-card {
+    border-radius: 12px !important;
+  }
+}

@@ -1,0 +1,229 @@
+/* 企業理念セクション */
+.philosophy {
+  position: relative;
+  background: linear-gradient(135deg, #0c1e44, #113366);
+  overflow: hidden;
+  color: #fff;
+}
+
+/* MissionとVisionのスタイル */
+.philosophy-card:nth-child(1) p,
+.philosophy-card:nth-child(2) p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Value用のスタイル調整 */
+.philosophy-card:nth-child(3) {
+  padding: 2.5rem;
+}
+
+.philosophy-card:nth-child(3) p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 0;
+}
+
+/* 背景エフェクト */
+.philosophy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(0deg, rgba(23, 49, 94, 0.9) 0%, rgba(15, 34, 70, 0.8) 100%),
+    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7ZhBCsIwEEXj1o3gwrN4NS/lTcSjeAVxKwquFDdKA5KaCv0zaSf5P8wiBB7JJLSdAQAAAECHYme2YZoeeWJ5DC2vVawcpuGeo+RGLp1Zi3JWnj79j7MoU3nRPRBDXyPLaGQdnTmF1x1NUnfS8pB9LMfT1JG9+VjR8isaSWmUSh8aaeRHI3qNLMbfzXo7s6ujNZknyku/rqNUzsFIpK8X39NXxxaSeTL6/fOcRpLvBGgkNo0o5c8JdY+0vOmFOXbJ3ySIRgAAACCCmb09ldX8c2qpmQAAAABJRU5ErkJggg==');
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.philosophy .container {
+  position: relative;
+  z-index: 1;
+}
+
+.philosophy .section-header {
+  color: #fff;
+}
+
+.philosophy-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.philosophy-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.philosophy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 5px;
+  background: linear-gradient(90deg, 
+    rgba(66, 153, 225, 0.7), 
+    rgba(255, 255, 255, 0.9),
+    rgba(66, 153, 225, 0.7));
+  z-index: 1;
+  border-radius: 2.5px;
+}
+
+.philosophy-card h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.philosophy-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--primary-light);
+  transition: width var(--transition-normal);
+}
+
+.philosophy-card:hover h3::after {
+  width: 100%;
+}
+
+.philosophy-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.philosophy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* パーティクル要素 */
+.philosophy-particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.philosophy-particle-1 {
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.3) 0%, rgba(66, 153, 225, 0) 70%);
+  animation: philosophy-float 20s infinite linear;
+}
+
+.philosophy-particle-2 {
+  top: 50%;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.2) 0%, rgba(66, 153, 225, 0) 70%);
+  animation: philosophy-float 30s infinite linear reverse;
+}
+
+@keyframes philosophy-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy-cards {
+    gap: 1.5rem;
+  }
+  
+  .philosophy-card {
+    padding: 1.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .philosophy-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .philosophy-card p {
+    font-size: 1rem;
+  }
+
+  .philosophy-card:nth-child(1) p,
+  .philosophy-card:nth-child(2) p {
+    font-size: 1.1rem;
+  }
+
+  .philosophy-card:nth-child(3) {
+    padding: 1.75rem;
+  }
+
+  .philosophy-card:nth-child(3) p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* スマホ用の追加調整 */
+@media (max-width: 576px) {
+  .philosophy-card {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    overflow: hidden !important;
+  }
+  
+  .philosophy-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 5% !important;
+    width: 90% !important;
+    height: 5px !important;
+    background: linear-gradient(90deg, 
+      rgba(66, 153, 225, 0.7), 
+      rgba(255, 255, 255, 0.9),
+      rgba(66, 153, 225, 0.7)) !important;
+    z-index: 1 !important;
+    border-radius: 2.5px !important;
+  }
+  
+  .philosophy-card:hover {
+    transform: translateY(-5px) !important;
+  }
+}

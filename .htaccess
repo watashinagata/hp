@@ -1,0 +1,87 @@
+# 基本設定
+Options -Indexes
+ServerSignature Off
+
+# デフォルトの文字セット
+AddDefaultCharset UTF-8
+
+# index.htmlをデフォルトページとして設定
+DirectoryIndex index.html index.php
+
+# セキュリティ強化
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# MIME Type設定
+<IfModule mod_mime.c>
+  AddType text/html .html .htm
+  AddType text/css .css
+  AddType text/javascript .js
+  AddType image/svg+xml .svg
+  AddType application/font-woff .woff
+  AddType application/font-woff2 .woff2
+</IfModule>
+
+# index_body_part*.htmlファイルへのアクセスを制限
+<FilesMatch "^index_body_part[0-9]+\.html$">
+  Order deny,allow
+  Deny from all
+</FilesMatch>
+
+# キャッシュコントロール
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# URLリダイレクト設定
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # WWWからのアクセスをリダイレクト
+  RewriteCond %{HTTP_HOST} ^www\.idealjapan\.co\.jp$ [NC]
+  RewriteRule ^(.*)$ https://idealjapan.co.jp/$1 [R=301,L]
+  
+  # index.htmlへのアクセスをルートURLにリダイレクト
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+  RewriteRule ^index\.html$ https://idealjapan.co.jp/ [R=301,L]
+  
+  # .htmlなしでアクセスした場合のリダイレクト
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^([^\.]+)$ $1.html [NC,L]
+  
+  # 404エラーを防ぐための一般的なリダイレクト
+  # 古いページや一般的な間違いのリダイレクト
+  RewriteRule ^about\.html$ /about/ [R=301,L]
+  RewriteRule ^services\.html$ /#services [R=301,L]
+  RewriteRule ^contact\.html$ /#contact [R=301,L]
+  RewriteRule ^profile\.html$ /#profile [R=301,L]
+  
+  # blog/へのアクセスを確保
+  RewriteRule ^blog/?$ /blog/ [R=301,L]
+  
+  # 404エラーページのカスタマイズ
+  ErrorDocument 404 /404.html
+</IfModule>
+
+# ブログディレクトリのWordPress設定（必要に応じて）
+<IfModule mod_rewrite.c>
+  # ブログディレクトリ内のWordPressリダイレクト
+  RewriteCond %{REQUEST_URI} ^/blog/
+  RewriteCond %{REQUEST_FILENAME} \!-f
+  RewriteCond %{REQUEST_FILENAME} \!-d
+  RewriteRule ^blog/(.*)$ /blog/index.php [L]
+</IfModule>

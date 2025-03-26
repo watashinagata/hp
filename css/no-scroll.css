@@ -1,0 +1,83 @@
+/**
+ * スクロール問題を解決するためのCSS
+ * すべてのセクション内のスクロールを無効化し、ページスクロールのみを許可
+ */
+
+/* スクロールを防止する特定のクラス */
+.no-section-scroll {
+  overflow: visible !important;
+  overflow-y: visible !important;
+  max-height: none !important;
+  height: auto !important;
+  touch-action: auto !important;
+}
+
+/* すべてのセクションに対する設定 */
+#services, #philosophy, #about, #profile, #careers, #contact {
+  overflow: visible !important;
+  touch-action: auto !important;
+  -webkit-overflow-scrolling: auto !important;
+}
+
+/* すべてのセクション内の要素に対する設定 */
+#services *, #philosophy *, #about *, #profile *, #careers *, #contact * {
+  overflow: visible !important;
+  overflow-y: visible !important;
+  max-height: none !important;
+  touch-action: auto !important;
+  -webkit-overflow-scrolling: auto !important;
+}
+
+/* 特定の問題のある要素に対する設定 */
+.service-card, .services-grid,
+.philosophy-card, .philosophy-cards,
+.about-content, .company-details,
+.profile-card, .profile-bio, .profile-details,
+.message-content, .position-card, .careers-content,
+.contact-form-wrapper, .contact-form {
+  overflow: visible !important;
+  overflow-y: visible !important;
+  max-height: none !important;
+  height: auto !important;
+  touch-action: auto !important;
+  -webkit-overflow-scrolling: auto !important;
+}
+
+/* フォーム要素の例外処理（スクロール許可） */
+textarea, select {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* モバイル環境でのスタイル調整 */
+@media (max-width: 768px) {
+  /* カードやセクションのスタイル調整 */
+  .service-card, .philosophy-card, .about-content, 
+  .profile-card, .position-card, .message-content {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
+  
+  /* ページスクロールが正常に機能するようにbody設定 */
+  html, body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    position: static !important;
+  }
+}
+
+/* iOS特有の問題に対応 */
+@supports (-webkit-touch-callout: none) {
+  /* iOSデバイスでの特別な処理 */
+  body {
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* モーメンタムスクロールの調整 */
+  * {
+    -webkit-overflow-scrolling: auto !important;
+  }
+}

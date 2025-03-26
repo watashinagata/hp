@@ -1,0 +1,174 @@
+/* カードスタイル */
+
+/* サービスカード */
+.service-card {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-normal);
+}
+
+.service-card:hover .icon {
+  transform: rotate(10deg);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.service-card p {
+  color: var(--color-text-light);
+  margin-bottom: 0;
+}
+
+/* フィロソフィーカード */
+.philosophy-card {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.philosophy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-primary);
+  transition: all var(--transition-normal);
+}
+
+.philosophy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.philosophy-card:hover::before {
+  width: 100%;
+  opacity: 0.1;
+}
+
+.philosophy-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.philosophy-card p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* 採用ポジションカード */
+.position-card {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.position-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.position-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  position: relative;
+  display: inline-block;
+}
+
+.position-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+.position-card p {
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.position-card .btn {
+  align-self: flex-start;
+}
+
+/* コンタクトカード */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  transition: all var(--transition-normal);
+}
+
+.contact-item:hover {
+  transform: translateX(10px);
+}
+
+.contact-item .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  color: var(--color-text-light);
+  margin-bottom: 0;
+}

@@ -1,0 +1,673 @@
+/* キャリアセクション */
+.careers {
+    background-color: var(--background-light);
+    padding: 100px 0;
+}
+
+.careers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.careers-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.benefits-list {
+    margin: 30px 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.benefit-item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.benefit-content h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.team-photo {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo img {
+    width: 100%;
+    display: block;
+}
+
+.team-quote {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    padding: 30px 20px 20px;
+    color: white;
+}
+
+.team-quote p {
+    font-style: italic;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.team-quote cite {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* チームの声セクション */
+.team-voices {
+    padding: 100px 0;
+    background-color: var(--background-alt);
+}
+
+.testimonials-slider {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.testimonial-cards {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+    flex: 0 0 100%;
+    padding: 30px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid var(--primary);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.testimonial-content .position {
+    color: var(--primary);
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.testimonial-content .quote {
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.slider-controls button {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.slider-controls button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.slider-controls button:hover:not(.disabled) {
+    transform: scale(1.1);
+}
+
+/* 募集職種セクション */
+.open-positions {
+    padding: 100px 0;
+    background-color: var(--background-light);
+}
+
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.position-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.position-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.position-header h3 {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.position-header .tag {
+    background-color: var(--accent);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.position-card p {
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.requirements {
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.requirements li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+}
+
+.requirements li i {
+    color: var(--success);
+    margin-right: 10px;
+}
+
+.apply-cta {
+    text-align: center;
+    padding: 40px;
+    background: var(--gradient-primary);
+    border-radius: 10px;
+    color: white;
+}
+
+.apply-cta h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.apply-cta p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* 社内文化セクション */
+.culture {
+    padding: 100px 0;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.culture-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.culture-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.culture-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.culture-card:hover .culture-image img {
+    transform: scale(1.05);
+}
+
+.culture-content {
+    padding: 20px;
+}
+
+.culture-content h3 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.culture-content h3 i {
+    margin-right: 10px;
+}
+
+.culture-content p {
+    color: var(--text);
+    line-height: 1.6;
+}
+/* ===== セクション別スタイル ===== */
+
+/* ===== 企業情報セクション ===== */
+.about {
+  background-color: var(--gray-100);
+}
+
+.about-image {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(26, 115, 232, 0.3), rgba(255, 87, 34, 0.2));
+  z-index: 1;
+}
+
+.about-image img {
+  transition: transform var(--transition-slow);
+  width: 100%;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+.about-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.company-details {
+  margin-top: 2rem;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.info-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.info-label {
+  font-weight: 700;
+  color: var(--primary);
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.info-value {
+  flex: 1;
+}
+
+/* ===== サービスセクション ===== */
+.services {
+  background-color: var(--light);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== 企業理念セクション ===== */
+.philosophy {
+  background-color: var(--gray-100);
+  position: relative;
+}
+
+.philosophy-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--light);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  z-index: 1;
+}
+
+.philosophy-card::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  transition: all var(--transition-slow);
+  z-index: -1;
+}
+
+.philosophy-card:hover::before {
+  top: 0;
+}
+
+.philosophy-card:hover {
+  color: var(--light);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.philosophy-card h3 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary);
+  transition: background-color var(--transition-normal);
+}
+
+.philosophy-card:hover h3::after {
+  background-color: var(--light);
+}
+
+.philosophy-card p {
+  font-size: 1.2rem;
+  transition: color var(--transition-normal);
+}
+
+.philosophy-card:hover p {
+  color: var(--light);
+}
+
+.principles {
+  margin-top: 5rem;
+}
+
+.principles h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.principles h3::before,
+.principles h3::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background-color: var(--gray-400);
+  width: 50px;
+}
+
+.principles h3::before {
+  right: 100%;
+  margin-right: 1rem;
+}
+
+.principles h3::after {
+  left: 100%;
+  margin-left: 1rem;
+}
+
+.principle-item {
+  position: relative;
+  background-color: var(--light);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem 1.5rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.principle-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.principle-item p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* ===== CTA セクション ===== */
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1920/1080') center/cover no-repeat;
+  color: var(--light);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  color: var(--gray-300);
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ===== お問い合わせセクション ===== */
+.contact {
+  background-color: var(--gray-100);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  transition: all var(--transition-normal);
+}
+
+.contact-item:hover {
+  transform: translateX(10px);
+}
+
+.contact-item .icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 1.5rem;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.contact-item .details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-container {
+  background-color: var(--light);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== フッター詳細 ===== */
+.footer-brand h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: var(--gray-400);
+  max-width: 300px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links h3::after,
+.footer-social h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links a {
+  color: var(--gray-400);
+  transition: all var(--transition-normal);
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--light);
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-circle);
+  color: var(--light);
+  transition: all var(--transition-normal);
+}
+
+.social-links a:hover {
+  background-color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.footer-bottom p {
+  color: var(--gray-500);
+  margin-bottom: 0;
+}

@@ -1,0 +1,9 @@
+/* レイアウト関連のスタイル */
+.main-content {
+  position: relative;
+  transition: opacity 1s ease;
+}
+
+.section {
+  transition: opacity 1s ease;
+}

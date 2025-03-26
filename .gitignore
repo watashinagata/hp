@@ -1,0 +1,44 @@
+# macOS関連ファイル
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# バックアップファイル
+*.bak
+*_backup*
+*.backup
+*.old
+
+# エディタ一時ファイル
+*~
+*.swp
+*.swo
+
+# その他の一時ファイル
+.localized
+*.duck
+
+# ログファイル
+*.log
+
+# キャッシュファイル
+.sass-cache/
+.tmp/
+.cache/
+
+# 開発環境設定
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 依存関係ディレクトリ
+/node_modules/
+/vendor/
+
+# WordPressのファイル (ブログは別リポジトリで管理する)
+/blog/
+/blog/**/*

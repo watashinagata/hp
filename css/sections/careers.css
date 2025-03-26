@@ -1,0 +1,309 @@
+/* 採用情報セクション */
+.careers {
+  position: relative;
+  overflow: visible;
+  padding: 6rem 0;
+}
+
+.careers-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 導入テキスト */
+.intro-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+/* 採用情報カードグリッド */
+.careers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  margin: 0 auto 4rem;
+}
+
+/* カードデザイン */
+.career-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.card-header i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.card-header h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-body p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+/* 職種特徴リスト */
+.job-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.job-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.job-features li:last-child {
+  border-bottom: none;
+}
+
+.feature-label {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-right: 0.5rem;
+}
+
+/* ボタンスタイル */
+.card-action {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* 企業環境セクション */
+.careers-benefits {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.careers-benefits h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-item i {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.benefit-item h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.benefit-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+/* 装飾用パーティクル要素 */
+.careers-particle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.careers-particle-1 {
+  bottom: 5%;
+  left: 5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
+  animation: careers-float 25s infinite ease-in-out;
+}
+
+.careers-particle-2 {
+  top: 15%;
+  right: 8%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0) 70%);
+  animation: careers-float-reverse 30s infinite ease-in-out;
+}
+
+@keyframes careers-float {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes careers-float-reverse {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(30px) rotate(-180deg) scale(1.08);
+  }
+  100% {
+    transform: translateY(0) rotate(-360deg) scale(1);
+  }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 992px) {
+  .careers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card-header {
+    padding: 1.5rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.4rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .careers-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .intro-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .careers {
+    padding: 4rem 0;
+  }
+  
+  .intro-text {
+    margin-bottom: 2rem;
+  }
+  
+  .card-header i {
+    font-size: 2rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .job-features li {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .btn-primary {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .careers-benefits h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefit-item {
+    padding: 1.5rem;
+  }
+  
+  .benefit-item h4 {
+    font-size: 1.2rem;
+  }
+  
+  .benefit-item p {
+    font-size: 0.9rem;
+  }
+}
