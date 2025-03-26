@@ -1,52 +1,175 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16936045972"></script> 
+    <script> 
+      window.dataLayer = window.dataLayer || []; 
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date()); 
+      gtag('config', 'AW-16936045972'); 
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, follow">
-    <title>ページが見つかりません | Ideal Japan</title>
-    <link rel="canonical" href="https://idealjapan.co.jp/404.html">
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- Google タグマネージャーや他の共通ヘッダー要素があればここに -->
+    <title>ページが見つかりません | idealjapan</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://idealjapan.co.jp/404.html" />
+    <style>
+        .error-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .error-title {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        
+        .error-subtitle {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        
+        .error-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+        
+        .error-links {
+            margin: 3rem 0;
+        }
+        
+        .error-links a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .error-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .error-icon {
+            font-size: 8rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .error-title {
+                font-size: 4rem;
+            }
+            
+            .error-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .error-icon {
+                font-size: 6rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <!-- ヘッダーコンテンツ -->
-        <nav>
-            <a href="/">ホーム</a>
-            <a href="/about/shoya-nagata.html">会社概要</a>
-            <a href="/blog/">ブログ</a>
-            <!-- その他のナビゲーションリンク -->
-        </nav>
+    <!-- ナビゲーション -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="index.html#about">企業情報</a></li>
+                    <li><a href="index.html#profile">代表者</a></li>
+                    <li><a href="index.html#services">サービス</a></li>
+                    <li><a href="index.html#philosophy">理念</a></li>
+                    <li><a href="index.html#careers">採用</a></li>
+                    <li><a href="index.html#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="error-page">
-            <div class="container">
-                <h1>404 - ページが見つかりません</h1>
-                <p>お探しのページは移動または削除された可能性があります。</p>
-                <p>以下のリンクからサイト内の他のページをご覧ください。</p>
-                <ul>
-                    <li><a href="/">ホームページ</a></li>
-                    <li><a href="/about/shoya-nagata.html">会社概要</a></li>
-                    <li><a href="/blog/">ブログ</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <!-- フッターコンテンツ -->
+    <!-- エラーコンテンツ -->
+    <section class="section-padding">
         <div class="container">
-            <p>&copy; 2025 Ideal Japan. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="/privacy-policy.html">プライバシーポリシー</a>
-                <a href="/tokushoho.html">特定商取引法に基づく表記</a>
+            <div class="error-content">
+                <div class="error-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <h1 class="error-title">404</h1>
+                <h2 class="error-subtitle">ページが見つかりません</h2>
+                <p class="error-text">お探しのページは移動または削除された可能性があります。</p>
+                <p class="error-text">以下のリンクからサイト内の他のページをご覧ください。</p>
+                <div class="error-links">
+                    <a href="index.html">ホームに戻る</a>
+                    <a href="index.html#contact">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>idealjapan</h2>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">ホーム</a>
+                    <a href="index.html#about">企業情報</a>
+                    <a href="index.html#profile">代表者</a>
+                    <a href="index.html#services">サービス</a>
+                    <a href="index.html#philosophy">理念</a>
+                    <a href="index.html#careers">採用</a>
+                    <a href="index.html#contact">お問い合わせ</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 idealjapan株式会社</p>
+                <div class="footer-policy-links">
+                    <a href="privacy-policy.html">プライバシーポリシー</a>
+                    <a href="tokushoho.html">特定商取引法に基づく表記</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- 共通のJavaScriptファイル -->
-    <script src="/js/main.js"></script>
+    <!-- トップへ戻るボタン -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- スクリプト -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
